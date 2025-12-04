@@ -1,6 +1,8 @@
+use crate::daily::common;
+
 pub fn day1() {
     let path = "src/resources/day1.txt";
-    let raw = _read(path);
+    let raw = common::read(path);
     let pos = run(&raw);
     println!("Final counts: {:?}", pos);
 }
@@ -18,10 +20,6 @@ fn run(raw: &String) -> Position {
         pos.turn(mv);
     }
     return pos;
-}
-
-fn _read(path: &str) -> String {
-    return std::fs::read_to_string(path).expect("Expected content in file");
 }
 
 fn _parse_moves(raw: &String) -> Vec<Move> {
@@ -107,5 +105,5 @@ fn test_example() {
     let raw = "L68\nL30\nR48\nL5\nR60\nL55\nL1\nL99\nR14\nL82".to_string();
     let pos = run(&raw);
     assert_eq!(pos.origin_count, 3);
-    assert_eq!(pos.times_crossed_origin, 8);
+    assert_eq!(pos.times_crossed_origin, 6);
 }

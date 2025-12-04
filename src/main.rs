@@ -1,7 +1,7 @@
-use crate::daily::day1::day1;
+use crate::daily::day2::day2;
 
 mod daily;
 
 fn main() {
-    day1();
+    let x =day2();
 }
