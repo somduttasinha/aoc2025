@@ -1,4 +1,4 @@
-use crate::daily::common;
+use crate::common;
 
 pub fn day1() {
     let path = "src/resources/day1.txt";

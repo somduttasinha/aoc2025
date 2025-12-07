@@ -1,6 +1,6 @@
 use std::collections::VecDeque;
 
-use crate::daily::common::{self, Part};
+use crate::common::{self, Part};
 
 pub fn day2(part: Part) {
     let path = "src/resources/day2.txt";

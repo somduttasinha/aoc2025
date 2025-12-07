@@ -1,8 +1,10 @@
-use crate::daily::common::Part;
+use crate::common::Part;
 use crate::daily::day1::day1;
 use crate::daily::day2::day2;
+use crate::daily::day3::day3;
 use clap::Parser;
 
+mod common;
 mod daily;
 
 #[derive(Parser, Debug)]
@@ -18,6 +20,7 @@ fn main() {
     match (args.day, args.part) {
         (1, _) => day1(),
         (2, p) => day2(p),
+        (3, p) => day3(p),
         _ => unimplemented!("Other days have not yet been implemented"),
     }
 }
