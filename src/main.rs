@@ -1,3 +1,4 @@
+use crate::daily::common::Part;
 use crate::daily::day1::day1;
 use crate::daily::day2::day2;
 use clap::Parser;
@@ -8,13 +9,15 @@ mod daily;
 struct Args {
     #[arg[short, long]]
     day: u8,
+    #[arg[short, long, value_enum]]
+    part: Part,
 }
 
 fn main() {
     let args = Args::parse();
-    match args.day {
-        1 => day1(),
-        2 => day2(),
+    match (args.day, args.part) {
+        (1, _) => day1(),
+        (2, p) => day2(p),
         _ => unimplemented!("Other days have not yet been implemented"),
     }
 }
