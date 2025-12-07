@@ -72,4 +72,3 @@ fn test_largest_joltage() {
     assert_eq!(largest_joltage("98173", 3), 987);
     assert_eq!(largest_joltage("991", 2), 99);
 }
-
