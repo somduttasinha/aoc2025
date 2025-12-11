@@ -4,6 +4,7 @@ use crate::daily::day2::day2;
 use crate::daily::day3::day3;
 use crate::daily::day4::day4;
 use crate::daily::day5::day5;
+use crate::daily::day6::day6;
 use clap::Parser;
 
 mod common;
@@ -25,6 +26,7 @@ fn main() {
         (3, p) => day3(p),
         (4, p) => day4(p),
         (5, p) => day5(p),
+        (6, p) => day6(p),
         _ => unimplemented!("Other days have not yet been implemented"),
     }
 }
